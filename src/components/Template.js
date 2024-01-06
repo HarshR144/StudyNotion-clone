@@ -2,7 +2,8 @@ import React from 'react'
 import frameImage from '../assets/frame.png'
 import LoginForm from './LoginForm'
 import SignUpForm from './SignUpForm'
-export const Template = ({title, desc1,desc2,formType,image, isLoggedIn, setIsLoggedIn}) => {
+
+const Template = ({title, desc1,desc2,formType,image,  setIsLoggedIn}) => {
   return (
   <div>
         <div>
@@ -13,13 +14,16 @@ export const Template = ({title, desc1,desc2,formType,image, isLoggedIn, setIsLo
 
         </p>
 
-        {formType=="login" ? (<LoginForm/>) : (<SignUpForm/>)}
+        {
+            formType==="login" ? (<LoginForm setIsLoggedIn={setIsLoggedIn}/>) : (<SignUpForm setIsLoggedIn={setIsLoggedIn}/>)
+        }
+
         <div>
             <div></div>
             <p>OR</p>
             <div></div>
         </div>
-        <buttom>formType=="login" ? (Login with google):(Signup with google)</buttom>
+        <button>{formType==="login" ? ("Login with google"):("Signup with google")}</button>
     
     </div>
 
@@ -30,3 +34,9 @@ export const Template = ({title, desc1,desc2,formType,image, isLoggedIn, setIsLo
   </div>
       )
 }
+
+
+export default Template;
+
+
+

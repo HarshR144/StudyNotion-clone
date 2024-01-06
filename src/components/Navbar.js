@@ -11,7 +11,7 @@ const Navbar = (props) => {
   return (
     <div className='flex justify-evenly'>
         <Link to="/">
-          <img src={logo} height={32} width={160} loading='lazy'></img>
+          <img src={logo} alt='' height={32} width={160} loading='lazy'></img>
         </Link>
         <nav>
           <ul className='flex gap-3'>
@@ -29,9 +29,7 @@ const Navbar = (props) => {
 
         <div className='flex gap-3 ml-5 mr-3'>
            { !isLoggedIn &&
-            <Link to="/login" ><button >
-              Login
-              </button></Link>
+            <Link to="/login" ><button >Login</button></Link>
            }
            { !isLoggedIn &&
             <Link to="/signup" ><button >Signup</button></Link>

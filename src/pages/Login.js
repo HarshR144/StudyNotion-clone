@@ -1,8 +1,19 @@
 import React from 'react'
-
-const Login = () => {
+import Template  from '../components/Template'
+import loginImage from '../assets/login.png'
+const Login = (props) => {
   return (
-    <div>Login</div>
+
+        <Template 
+          title="Welcome Back"
+          desc1="Build skills for today, tomorrow, and beyond."
+          desc2="Education to future-proof your career."
+          image={loginImage}
+          formType="login"
+          setIsLoggedIn={props.setIsLoggedIn}
+       
+         />
+
   )
 }
 
