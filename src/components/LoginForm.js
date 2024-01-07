@@ -21,10 +21,11 @@ const LoginForm = ({setIsLoggedIn}) => {
         setIsLoggedIn(true);
         toast.success("Logged In");
         navigate("/dashboard");
+
     }
 
     return (
-    <form onSubmit={submitHandler} className='flex flex-col w-full gap--y-4 mt-6'>
+    <form onSubmit={submitHandler} className='flex flex-col w-full gap-y-4 mt-6'>
         <label className='w-full'> 
             <p className='text-[0.875rem] text-richblack-5 mb-1 leading-[1.375rem]'>Email Address 
                 <sup className='text-pink-200 '> *</sup> 
@@ -35,7 +36,7 @@ const LoginForm = ({setIsLoggedIn}) => {
             type='email'
             value={formData.email}
             onChange={changeHandler}
-            placeholder='Enter email id'/>
+            placeholder='Enter email address'/>
         </label>
         
 
@@ -60,11 +61,11 @@ const LoginForm = ({setIsLoggedIn}) => {
         </label>
         
         <Link to="#">
-            <p className='text-xs mt-1 text-blue-100 max-w-max ml-auto   '>Forgot password</p>
+            <p className='text-xs mt-1 text-blue-100 max-w-max ml-auto   '>Forgot Password</p>
         </Link>
         
-        <button className='bg-yellow-50 rounded-[8px] font-medium text-richblack-900 px-[12px] py-[8px]'>
-            Log In
+        <button className='bg-yellow-50 rounded-[8px] font-medium text-richblack-900 px-[12px] py-[8px] mt-6'>
+            Sign In
         </button>
     </form>
   )
